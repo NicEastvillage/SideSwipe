@@ -56,7 +56,10 @@ class Vec3:
     def unit(self) -> 'Vec3':
         return self / self.mag()
 
-    def to_desired_vec(self):
+    def yz(self):
+        return Vec3(0, self.y, self.z)
+
+    def desired(self):
         return Vector3(self.x, self.y, self.z)
 
     @staticmethod
